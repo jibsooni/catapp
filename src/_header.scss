@@ -1,0 +1,25 @@
+
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+}
+
+
+header {
+
+    @include flexCenter();
+
+    justify-content: space-between;
+    padding: 32px;
+    h1 {
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    div {
+        cursor: pointer;
+        font-size: 30px;
+    }
+    button {
+        background: $primaryBtn;
+    }
+}

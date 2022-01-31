@@ -1,0 +1,76 @@
+$primaryBtn: rgb(219, 138, 138);
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+$text-colour: rgb(59, 59, 59);
+$primary-colour: white;
+$mobile: 800px;
+
+@import "./header";
+
+@mixin theme($dark-theme: true) {
+    @if $dark-theme {
+        background: darken($primary-colour, 100%);
+        color: lighten($text-colour, 100);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.cat {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    filter: brightness(0.4);
+    transition: all .3s ease;
+    &:hover {
+        filter: brightness(1);
+        transform: scale(1.1);
+    }
+    &__image {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+    &__controls {
+        @include flexCenter();
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 40px;
+        letter-spacing: 10px;
+        div {
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__upvotes {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 40px;
+        color: $text-colour;
+        font-weight: map-get($map: $font-weights, $key: medium); 
+    }
+    
+}
+
+.dark {
+    @include theme(true);
+    
+}

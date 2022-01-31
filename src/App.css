@@ -1,67 +1,98 @@
-ul {
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-}
-
-.cat {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    filter: brightness(0.4);
-    transition: all .3s ease;
-}
-
-.cat:hover {
-    filter: brightness(1);
-}
-
-.cat__image {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-}
-
-.cat__controls {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 40px;
-    letter-spacing: 10px;
-}
-
-.cat__controls div {
-    transition: all .3s ease;
-    cursor: pointer;
-}
-
-.cat__controls div:hover {
-    transform: scale(1.1);
-}
-
-.cat__upvotes {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 40px;
-    color: blue;
-    font-weight: 900; 
-}
-
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px;
 }
 
 header h1 {
-    font-weight: 900;
-    text-transform: uppercase;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 header div {
-    cursor: pointer;
-    font-size: 30px;
+  cursor: pointer;
+  font-size: 30px;
 }
+
+header button {
+  background: #db8a8a;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cat {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.cat:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.cat__image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.cat__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+.cat__controls div {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.cat__controls div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.cat__upvotes {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 40px;
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
+/*# sourceMappingURL=App.css.map */

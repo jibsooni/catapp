@@ -36,7 +36,8 @@ const catsSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(logoutUser, (state) => {
+        builder
+        .addCase(logoutUser, (state) => {
             state.cats.forEach(cat => cat.upvotes = 0)
         })
     }
